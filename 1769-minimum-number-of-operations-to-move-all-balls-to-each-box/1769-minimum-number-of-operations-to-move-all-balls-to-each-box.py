@@ -3,10 +3,7 @@ class Solution:
         
         length = len(boxes)
         answer = []
-        # for i in range(length):
-        #     answer.append(0)
         
-
         for i in range(length):
             count = 0
             for j in range(length):
