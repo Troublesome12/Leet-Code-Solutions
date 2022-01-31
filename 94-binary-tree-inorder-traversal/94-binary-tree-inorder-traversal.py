@@ -16,6 +16,4 @@ class Solution:
         return answer
         
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        answer = []
-        self.myInorderTraversal(root, answer)
-        return answer
+        return self.myInorderTraversal(root, [])
