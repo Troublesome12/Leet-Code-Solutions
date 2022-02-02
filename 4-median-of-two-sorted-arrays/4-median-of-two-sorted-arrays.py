@@ -1,5 +1,3 @@
-import statistics
-
 class Solution:
     def median(self, nums: List[int]) -> float:
         length = len(nums)
