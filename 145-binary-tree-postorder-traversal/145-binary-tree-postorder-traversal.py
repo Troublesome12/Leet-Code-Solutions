@@ -5,7 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def postorderTreeTraversal(self, root: Optional[TreeNode], result: List[int]) -> List[int]:
+    def postorderTreeTraversal(self, root: Optional[TreeNode], result: List[int] = []) -> List[int]:
         if root is None:
             return
         
