@@ -5,14 +5,15 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+    
+    def helper(self, lt, rt):
+        if lt is None and rt is None: return True
+        if lt is None or rt is None or lt.val != rt.val: return False
+        return self.helper(lt.left, rt.right) and self.helper(lt.right, rt.left)
+
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         if root is None:
             return True
         
-        def helper(lt, rt):
-            if lt is None and rt is None: return True
-            if lt is None or rt is None or lt.val != rt.val: return False
-            return helper(lt.left, rt.right) and helper(lt.right, rt.left)
-
-        return helper(root.left, root.right)
+        return self.helper(root.left, root.right)
         
