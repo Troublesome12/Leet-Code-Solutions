@@ -6,11 +6,10 @@ class Solution:
             s = str(value%base) + s
             value = value//base
         
-        return int(s)
+        return s
     
     
     def is_palindrom(self, value):
-        value = str(value)
         rev_value = value[::-1]
         
         if value == rev_value:
